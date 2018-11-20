@@ -21,7 +21,7 @@ namespace ClassLibForNUnit.Test
     public class NUnitDemo
     {
         [Test]
-        //[Category("BLAH")]
+        [Category("BLAH")]
         // bug in nunit3-vs-adapter 3.11
         // Categories cause duplicate entries in test explorer
         // https://github.com/nunit/nunit3-vs-adapter/issues/559
@@ -55,8 +55,8 @@ namespace ClassLibForNUnit.Test
         // Data Driven NUnit Test
 
         //[Test, TestCase(10, 20, 30)]
-        //[Test, DD]
-        [Test]
+        [Test, DD]
+        //[Test]
         [TestCase(1, 2, 3)]
         [TestCase(10, 20, 30)]
         [TestCase(12, 20, 32)]
